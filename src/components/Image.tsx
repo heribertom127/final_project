@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 const images = [
-  '../../assets/img/Kanye_2.png',
+  'https://photos.app.goo.gl/kZV2ategzTcgiJD27',
   '../../assets/img/Kanye_3.png',
   '../../assets/img/Kanye_4.png',
   '../../assets/img/Kanye_5.png'
