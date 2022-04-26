@@ -1,13 +1,42 @@
-import React from 'react'
-
-function QuoteBox() {
+import { motion, AnimateSharedLayout } from 'framer-motion'
+const moveVariants = {
+  hidden: { opacity: 0, scale: 0 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      type: 'spring',
+      bounce: 0.5
+    }
+  }
+}
+function QuoteBox({ quote }) {
   return (
-    <div className="p-8 w-1/2 bg-[#CCA69A]">
-      <p className="w-9/12 font-serif text-[25.89px]">
-        "For me, money is not my definition of success. Inspiring people is a
-        definition of success"
-      </p>
-    </div>
+    <AnimateSharedLayout>
+      <motion.div
+        layout
+        className="p-8 w-1/2 bg-[#9CD08E]"
+        variants={moveVariants}
+        initial="hidden"
+        animate="visible"
+      >
+        <motion.p
+          layout
+          className=" font-serif text-[25.89px] text-neutral-900"
+          key={quote.quote}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+        >
+          &quot;{quote?.quote}&quot;
+        </motion.p>
+
+        <h2 className="font-serif text-[19px] font-semibold text-neutral-800 ">
+          {' '}
+          - Kanye West
+        </h2>
+      </motion.div>
+    </AnimateSharedLayout>
   )
 }
 

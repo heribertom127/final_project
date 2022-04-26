@@ -1,17 +1,38 @@
 import React from 'react'
-
-function Nav() {
+import { motion } from 'framer-motion'
+const hoverVariant = {
+  hover: { scale: 1.05, transition: { duration: 0.25, ease: 'easeOut' } },
+  tap: { scale: 0.75, transition: { duration: 0.25, ease: 'easeIn' } }
+}
+function Nav({ fetchQuote, changeIndex }) {
   return (
-    <div className="flex gap-8 m-auto w-11/12">
-      <button className="py-2 px-4 font-serif text-[25.89px] text-[#FCE373] bg-neutral-900">
+    <div className="flex gap-4">
+      <motion.button
+        onClick={fetchQuote}
+        className="py-2 px-4 font-serif text-[25.89px] text-[#FCE373] bg-neutral-900"
+        variants={hoverVariant}
+        whileHover="hover"
+        whileTap="tap"
+      >
         Get Inspired
-      </button>
-      <button className="py-2 px-4 font-serif text-[25.89px] text-[#FCE373] bg-neutral-900">
+      </motion.button>
+      <motion.button
+        className="py-2 px-4 font-serif text-[25.89px] text-[#FCE373] bg-neutral-900"
+        variants={hoverVariant}
+        whileHover="hover"
+        whileTap="tap"
+      >
         Show Respect
-      </button>
-      <button className="py-2 px-4 font-serif text-[25.89px] text-[#FCE373] bg-neutral-900">
+      </motion.button>
+      <motion.button
+        onClick={changeIndex}
+        className="py-2 px-4 font-serif text-[25.89px] text-[#FCE373] bg-neutral-900"
+        variants={hoverVariant}
+        whileHover="hover"
+        whileTap="tap"
+      >
         New Image
-      </button>
+      </motion.button>
     </div>
   )
 }
