@@ -7,7 +7,7 @@ const images = [
   '../../assets/img/Kanye_5.png'
 ]
 
-function Image({ imageindex }) {
+function Image({ imageindex }: { imageindex: number }) {
   return (
     <motion.div
       className="overflow-hidden absolute right-0 bottom-0 w-3/5 h-4/5"

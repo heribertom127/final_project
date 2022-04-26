@@ -36,6 +36,9 @@ function App() {
       setimageIndex(0)
     }
   }
+  const getData = () => {
+    refetch()
+  }
 
   return (
     <div>
@@ -49,7 +52,7 @@ function App() {
           <div className="m-auto w-11/12">
             <Banner />
             <Nav
-              fetchQuote={refetch}
+              fetchQuote={getData}
               changeIndex={updateIndex}
               showRespect={setConfetti}
             />

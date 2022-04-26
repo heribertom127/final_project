@@ -1,10 +1,18 @@
-import React from 'react'
+import React, { MouseEventHandler } from 'react'
 import { motion } from 'framer-motion'
 const hoverVariant = {
   hover: { scale: 1.05, transition: { duration: 0.25, ease: 'easeOut' } },
   tap: { scale: 0.75, transition: { duration: 0.25, ease: 'easeIn' } }
 }
-function Nav({ fetchQuote, changeIndex, showRespect }) {
+function Nav({
+  fetchQuote,
+  changeIndex,
+  showRespect
+}: {
+  fetchQuote: MouseEventHandler
+  changeIndex: MouseEventHandler
+  showRespect: MouseEventHandler
+}) {
   return (
     <div className="flex gap-4">
       <motion.button

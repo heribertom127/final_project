@@ -1,4 +1,4 @@
-import { motion, AnimateSharedLayout } from 'framer-motion'
+import { motion } from 'framer-motion'
 const moveVariants = {
   hidden: { opacity: 0, scale: 0 },
   visible: {
@@ -10,9 +10,10 @@ const moveVariants = {
     }
   }
 }
-function QuoteBox({ quote }) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function QuoteBox({ quote }: { quote: any }) {
   return (
-    <AnimateSharedLayout>
+    <div>
       <motion.div
         layout
         className="p-8 w-1/2 bg-[#9CD08E]"
@@ -36,7 +37,7 @@ function QuoteBox({ quote }) {
           - Kanye West
         </h2>
       </motion.div>
-    </AnimateSharedLayout>
+    </div>
   )
 }
 
