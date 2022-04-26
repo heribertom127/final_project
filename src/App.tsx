@@ -13,6 +13,7 @@ import Image from 'components/Image'
 
 function App() {
   const fetchQuote = async () => {
+    console.log('Hello')
     const response = await fetch('https://api.kanye.rest')
     return response.json()
   }
