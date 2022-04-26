@@ -3,7 +3,6 @@ import { Routes, Route, Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { useQuery } from 'react-query'
 import Lottie from 'lottie-react-web'
-import loading from '../assets/lottie/loading.json'
 import confetti from '../assets/lottie/confetti2.json'
 import { useState } from 'react'
 import Banner from 'components/Banner'
@@ -12,6 +11,7 @@ import QuoteBox from 'components/QuoteBox'
 import Image from 'components/Image'
 
 function App() {
+  //testing
   const fetchQuote = async () => {
     console.log('Hello')
     const response = await fetch('https://api.kanye.rest')
