@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { useQuery } from 'react-query'
 import Lottie from 'lottie-react-web'
 import loading from '../assets/lottie/loading.json'
+import confetti from '../assets/lottie/confetti2.json'
 import { useState } from 'react'
 import Banner from 'components/Banner'
 import Nav from 'components/Nav'
@@ -16,14 +17,18 @@ function App() {
     return response.json()
   }
 
+  function setConfetti() {
+    setlottieState(!lottieState)
+  }
   const { data, isLoading, refetch } = useQuery('quote', fetchQuote, {
     refetchOnWindowFocus: false,
     enabled: false
   })
+
   const [imageIndex, setimageIndex] = useState(0)
+  const [lottieState, setlottieState] = useState(true)
 
   const updateIndex = () => {
-    console.log(imageIndex)
     if (imageIndex < 3) {
       setimageIndex(imageIndex + 1)
     } else if (imageIndex == 3) {
@@ -42,11 +47,15 @@ function App() {
         >
           <div className="m-auto w-11/12">
             <Banner />
-            <Nav fetchQuote={refetch} changeIndex={updateIndex} />
+            <Nav
+              fetchQuote={refetch}
+              changeIndex={updateIndex}
+              showRespect={setConfetti}
+            />
           </div>
         </motion.div>
 
-        <div className="flex m-auto mt-16 w-11/12">
+        <div className="flex  m-auto mt-16 w-11/12">
           {isLoading && (
             <div>
               <Lottie options={{ animationData: loading }} />
@@ -64,7 +73,18 @@ function App() {
               Get Inspired
             </motion.h2>
           )}
+
           <Image imageindex={imageIndex} />
+          <div className="overflow-hidden absolute top-0 h-screen">
+            <div className="object-cover" onClick={setConfetti}>
+              {!lottieState && (
+                <Lottie
+                  options={{ animationData: confetti, autoplay: false }}
+                  isStopped={lottieState}
+                />
+              )}
+            </div>
+          </div>
         </div>
       </div>
     </div>

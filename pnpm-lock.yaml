@@ -25,6 +25,7 @@ specifiers:
   eslint-plugin-tailwindcss: ^3.5.0
   eslint-plugin-testing-library: ^5.3.1
   framer-motion: ^6.3.1
+  howler: ^2.2.3
   jest: ^27.5.1
   lottie-react-web: ^2.2.2
   lottie-web: ^5.9.3
@@ -32,6 +33,7 @@ specifiers:
   postcss: ^8.4.12
   prettier: 2.6.2
   react: ^18.0.0
+  react-audio-player: ^0.17.0
   react-dom: ^18.0.0
   react-query: ^3.38.0
   react-router-dom: '6'
@@ -43,9 +45,11 @@ specifiers:
 dependencies:
   axios: 0.27.0
   framer-motion: 6.3.1_react-dom@18.0.0+react@18.0.0
+  howler: 2.2.3
   lottie-react-web: 2.2.2_react@18.0.0
   lottie-web: 5.9.3
   react: 18.0.0
+  react-audio-player: 0.17.0_react-dom@18.0.0+react@18.0.0
   react-dom: 18.0.0_react@18.0.0
   react-query: 3.38.0_react-dom@18.0.0+react@18.0.0
   react-router-dom: 6.3.0_react-dom@18.0.0+react@18.0.0
@@ -3662,6 +3666,10 @@ packages:
       '@babel/runtime': 7.17.9
     dev: false
 
+  /howler/2.2.3:
+    resolution: {integrity: sha512-QM0FFkw0LRX1PR8pNzJVAY25JhIWvbKMBFM4gqk+QdV+kPXOhleWGCB6AiAF/goGjIHK2e/nIElplvjQwhr0jg==}
+    dev: false
+
   /html-encoding-sniffer/2.0.1:
     resolution: {integrity: sha512-D5JbOMBIR/TVZkubHT+OyT2705QvogUW4IBn6nHd756OwieSF9aDYFj4dv6HHEVGYbHaLETa3WggZYWWMyy3ZQ==}
     engines: {node: '>=10'}
@@ -4827,7 +4835,6 @@ packages:
   /object-assign/4.1.1:
     resolution: {integrity: sha1-IQmtx5ZYh8/AXLvUQsrIv7s2CGM=}
     engines: {node: '>=0.10.0'}
-    dev: true
 
   /object-hash/3.0.0:
     resolution: {integrity: sha512-RSn9F68PjH9HqtltsSnqYC1XXoWe9Bju5+213R98cNGttag9q9yAOTzdbsqvIa7aNm5WffBZFpWYr2aWrklWAw==}
@@ -5157,7 +5164,6 @@ packages:
       loose-envify: 1.4.0
       object-assign: 4.1.1
       react-is: 16.13.1
-    dev: true
 
   /psl/1.8.0:
     resolution: {integrity: sha512-RIdOzyoavK+hA18OGGWDqUTsCLhtA7IcZ/6NCs4fFJaHBDab+pDDmDIByWFRQJq2Cd7r1OoQxBGKOaztq+hjIQ==}
@@ -5177,6 +5183,17 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
+  /react-audio-player/0.17.0_react-dom@18.0.0+react@18.0.0:
+    resolution: {integrity: sha512-aCZgusPxA9HK7rLZcTdhTbBH9l6do9vn3NorgoDZRxRxJlOy9uZWzPaKjd7QdcuP2vXpxGA/61JMnnOEY7NXeA==}
+    peerDependencies:
+      react: '>=16'
+      react-dom: '>=16'
+    dependencies:
+      prop-types: 15.8.1
+      react: 18.0.0
+      react-dom: 18.0.0_react@18.0.0
+    dev: false
+
   /react-dom/18.0.0_react@18.0.0:
     resolution: {integrity: sha512-XqX7uzmFo0pUceWFCt7Gff6IyIMzFUn7QMZrbrQfGxtaxXZIcGQzoNpRLE3fQLnS4XzLLPMZX2T9TRcSrasicw==}
     peerDependencies:
@@ -5189,7 +5206,6 @@ packages:
 
   /react-is/16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
-    dev: true
 
   /react-is/17.0.2:
     resolution: {integrity: sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==}

@@ -18,7 +18,7 @@ function Image({ imageindex }) {
       <AnimatePresence>
         <motion.img
           key={imageindex}
-          className="object-contain absolute right-[-100px] bottom-[-70px] w-full h-full"
+          className="object-contain absolute right-[-100px] bottom-[-70px] w-full h-full select-none"
           src={images[imageindex]}
           alt="Kanye 1"
           initial={{ y: 1000, opacity: 0 }}
