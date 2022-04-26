@@ -23,6 +23,7 @@
     "axios": "^0.27.0",
     "framer-motion": "^6.3.1",
     "howler": "^2.2.3",
+    "jest-canvas-mock": "^2.3.1",
     "lottie-react-web": "^2.2.2",
     "lottie-web": "^5.9.3",
     "react": "^18.0.0",
@@ -33,6 +34,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.17.9",
+    "@babel/plugin-transform-runtime": "^7.17.0",
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-react": "^7.16.7",
     "@babel/preset-typescript": "^7.16.7",
