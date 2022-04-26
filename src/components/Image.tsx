@@ -1,11 +1,10 @@
 import React from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-const images = [
-  'https://photos.app.goo.gl/kZV2ategzTcgiJD27',
-  '../../assets/img/Kanye_3.png',
-  '../../assets/img/Kanye_4.png',
-  '../../assets/img/Kanye_5.png'
-]
+import kanye2 from '../../assets/img/Kanye_2.png'
+import kanye3 from '../../assets/img/Kanye_3.png'
+import kanye4 from '../../assets/img/Kanye_4.png'
+import kanye5 from '../../assets/img/Kanye_5.png'
+const images = [kanye2, kanye3, kanye4, kanye5]
 
 function Image({ imageindex }: { imageindex: number }) {
   return (
