@@ -60,11 +60,7 @@ function App() {
         </motion.div>
 
         <div className="flex  m-auto mt-16 w-11/12">
-          {isLoading && (
-            <div>
-              <Lottie options={{ animationData: loading }} />
-            </div>
-          )}
+          {isLoading && <div>Loading..</div>}
           {data ? (
             <QuoteBox quote={data} />
           ) : (
@@ -80,7 +76,11 @@ function App() {
 
           <Image imageindex={imageIndex} />
           <div className="overflow-hidden absolute top-0 h-screen">
-            <div className="object-cover" onClick={setConfetti}>
+            <div
+              className="object-cover"
+              data-testid="lottie"
+              onClick={setConfetti}
+            >
               {!lottieState && (
                 <Lottie
                   options={{ animationData: confetti, autoplay: false }}
