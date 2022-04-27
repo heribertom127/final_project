@@ -10,6 +10,15 @@ import Nav from 'components/Nav'
 import QuoteBox from 'components/QuoteBox'
 import Image from 'components/Image'
 
+export const updateIndex = (index) => {
+  if (index < 3) {
+    index = index + 1
+    return index
+  } else if (index == 3) {
+    return 0
+  }
+}
+
 function App() {
   //testing
   const fetchQuote = async () => {
@@ -29,12 +38,8 @@ function App() {
   const [imageIndex, setimageIndex] = useState(0)
   const [lottieState, setlottieState] = useState(true)
 
-  const updateIndex = () => {
-    if (imageIndex < 3) {
-      setimageIndex(imageIndex + 1)
-    } else if (imageIndex == 3) {
-      setimageIndex(0)
-    }
+  const changeImageIndex = () => {
+    setimageIndex(updateIndex(imageIndex))
   }
   const getData = () => {
     refetch()
@@ -53,7 +58,7 @@ function App() {
             <Banner />
             <Nav
               fetchQuote={getData}
-              changeIndex={updateIndex}
+              changeIndex={changeImageIndex}
               showRespect={setConfetti}
             />
           </div>

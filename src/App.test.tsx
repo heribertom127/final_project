@@ -5,7 +5,7 @@ import userEvent from '@testing-library/user-event'
 import { QueryClientProvider, QueryClient } from 'react-query'
 import { rest } from 'msw'
 import { setupServer } from 'msw/node'
-import App from './App'
+import App, { updateIndex } from './App'
 import { useFetchQuote } from 'useFetchQuote'
 
 const server = setupServer(
@@ -82,5 +82,13 @@ describe('<App/>', () => {
     userEvent.click(heading)
     const svg = await screen.findByRole('img')
     expect(svg).toBeInTheDocument()
+  })
+
+  it('test updateIndex funciton when 3 and above', () => {
+    expect(updateIndex(3)).toBe(0)
+  })
+
+  it('test updateIndex funciton when below 3', () => {
+    expect(updateIndex(2)).toBe(3)
   })
 })
