@@ -6,6 +6,6 @@
 
 npm install
 
-### The automation uses github actions that workflow is .github, the workflow is triggered each time a dependecy is added. After that the program is automatically built, tested, and deployed to netlify and it can be assessed with this link:
+### The automation uses github actions that workflow is in .github folder, the workflow is triggered each time a dependecy is added. After that the program is automatically built, tested, and deployed to netlify and it can be assessed with this link:
 
 https://flourishing-biscotti-f15016.netlify.app
