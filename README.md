@@ -1,67 +1,11 @@
-# React Tailwindcss Boilerplate build with Vite
+# It's a react project so you will need to install the dependencies with NPM
 
-This is a [ReactJS](https://reactjs.org) + [Vite](https://vitejs.dev) boilerplate to be used with [Tailwindcss](https://tailwindcss.com).
+# Thus you will need to download node js, and that comes with NPM
 
-## What is inside?
+# After you have NPM you need to install the dependences with
 
-This project uses many tools like:
-
-- [ReactJS](https://reactjs.org)
-- [Vite](https://vitejs.dev)
-- [TypeScript](https://www.typescriptlang.org)
-- [Jest](https://jestjs.io)
-- [Testing Library](https://testing-library.com)
-- [Tailwindcss](https://tailwindcss.com)
-- [Eslint](https://eslint.org)
-- [Prettier](https://prettier.io)
-
-## Getting Started
-
-### Install
-
-Create the project.
-
-```bash
-npx degit joaopaulomoraes/reactjs-vite-tailwindcss-boilerplate my-app
-```
-
-Access the project directory.
-
-```bash
-cd my-app
-```
-
-Install dependencies.
-
-```bash
 npm install
-```
 
-Serve with hot reload at http://localhost:3000.
+# The automation uses github actions that workflow is .github, the workflow is triggered each time a dependecy is added. After that the program is automatically built, tested, and deployed to netlify and it can be assessed with this link:
 
-```bash
-npm run dev
-```
-
-### Lint
-
-```bash
-npm run lint
-```
-
-### Build
-
-```bash
-npm run build
-```
-
-### Test
-
-```bash
-npm run test
-```
-
-## License
-
-This project is licensed under the MIT License.
-# final_project
+https://flourishing-biscotti-f15016.netlify.app
