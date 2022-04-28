@@ -18,7 +18,7 @@ export const updateIndex = (index) => {
     return 0
   }
 }
-
+//Interesting
 function App() {
   //testing
   const fetchQuote = async () => {
